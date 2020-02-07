@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <GroupTable
+      v-for="(group, index) in getGroups"
+      :group="group"
+      :key="index"
+    ></GroupTable>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import { mapGetters, mapActions } from "vuex";
+import GroupTable from "@/components/GroupTable";
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    GroupTable
+  },
+  computed: {
+    ...mapGetters(["getGroups"])
+  },
+  methods: {
+    ...mapActions({
+      fetchGroups: "fetchGroups"
+    })
+  },
+  created() {
+    this.fetchGroups();
   }
 };
 </script>
