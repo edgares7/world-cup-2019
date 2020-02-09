@@ -12,9 +12,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     groups: null,
-    matches: null,
-    playersGoalScored: null,
-    playersSaves: null
+    matches: null
   },
   mutations: {
     SET_GROUPS(state, groups) {
@@ -24,14 +22,6 @@ export default new Vuex.Store({
     SET_MATCHES(state, matches) {
       matches = _.orderBy(matches, ["datetime"], ["asc"]);
       state.matches = matches;
-    },
-
-    SET_PLAYER_GOAL_SCORED(state, data) {
-      state.playersGoalScored = data;
-    },
-
-    SET_PLAYER_SAVES(state, data) {
-      state.playersSaves = data;
     }
   },
   actions: {
@@ -58,8 +48,9 @@ export default new Vuex.Store({
   getters: {
     getGroups: state => state.groups,
     getMatches: state => state.matches,
-    getPlayersGoalScored: state => state.playersGoalScored,
-    getPlayersSaves: state => state.playersSaves
+    getStage: (state, getters) => stage => {
+      return getters.getMatches.filter(match => match.stage_name === stage);
+    }
   },
   modules: {}
 });

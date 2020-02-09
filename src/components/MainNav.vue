@@ -1,12 +1,12 @@
 <template>
   <nav class="main-nav">
     <ul class="main-nav__list">
-      <router-link active-class="active" tag="li" :to="{ name: 'home' }" exact>
+      <router-link active-class="active" tag="li" :to="{ name: 'Home' }" exact>
         <icon name="home"></icon>
         <div>Home</div>
       </router-link>
 
-      <router-link active-class="active" tag="li" :to="{ name: 'matches' }">
+      <router-link active-class="active" tag="li" :to="{ name: 'Matches' }">
         <icon name="calendar-alt"></icon>
         <div>Matches</div>
       </router-link>

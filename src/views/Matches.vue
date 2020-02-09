@@ -2,27 +2,27 @@
   <div class="matches">
     <tabs :options="{ useUrlFragment: false }">
       <tab name="Group phase">
-        <template v-for="(match, index) in getMatches">
+        <template v-for="(match, index) in getStage('First stage')">
           <match :key="index" :match="match" />
         </template>
       </tab>
       <tab name="1/8 finals">
-        <template v-for="(match, index) in getMatches">
+        <template v-for="(match, index) in getStage('Round of 16')">
           <match :key="index" :match="match" />
         </template>
       </tab>
       <tab name="Quarter finals">
-        <template v-for="(match, index) in getMatches">
+        <template v-for="(match, index) in getStage('Quarter-finals')">
           <match :key="index" :match="match" />
         </template>
       </tab>
       <tab name="Semi finals">
-        <template v-for="(match, index) in getMatches">
+        <template v-for="(match, index) in getStage('Semi-finals')">
           <match :key="index" :match="match" />
         </template>
       </tab>
       <tab name="Final">
-        <template v-for="(match, index) in getMatches">
+        <template v-for="(match, index) in getStage('Final')">
           <match :key="index" :match="match" />
         </template>
       </tab>
@@ -39,7 +39,7 @@ export default {
     Match
   },
   computed: {
-    ...mapGetters(["getMatches"])
+    ...mapGetters(["getMatches", "groupStage", "getStage"])
   },
   methods: {
     ...mapActions({
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.matches-view {
+.matches {
   .header-bar {
     margin-top: 10px;
   }
@@ -61,16 +61,18 @@ export default {
     > .tabs-component-tabs {
       display: flex;
       margin-bottom: 10px;
-    }
-    .tabs-component-tab {
-      display: flex;
-      &.is-active {
-        border-bottom: 2px solid $c-blue;
-      }
-      a {
-        padding: 6px 8px;
-        font-size: 12px;
-        color: $c-blue;
+
+      .tabs-component-tab {
+        display: flex;
+
+        &.is-active {
+          border-bottom: 2px solid $c-blue;
+        }
+        a {
+          padding: 6px 8px;
+          font-size: 12px;
+          color: $c-blue;
+        }
       }
     }
   }

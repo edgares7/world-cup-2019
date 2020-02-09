@@ -1,7 +1,7 @@
 <template>
   <header class="header-bar">
     <div class="header-bar__inner">
-      <router-link :to="{ name: 'home' }">
+      <router-link :to="{ name: 'Home' }">
         <img
           class="header-bar__logo"
           src="@/assets/images/world-cup-logo.png"
