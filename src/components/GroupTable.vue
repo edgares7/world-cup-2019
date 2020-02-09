@@ -49,4 +49,63 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.group-table {
+  padding-bottom: 20px;
+  @media screen and (min-width: 48em) {
+    width: 43%;
+  }
+
+  &__title {
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  &__table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 10px;
+    @media screen and (min-width: 48em) {
+      font-size: 16px;
+    }
+    a {
+      color: $c-black;
+    }
+    th {
+      text-align: left;
+
+      &:not(:nth-of-type(-n + 1)) {
+        text-align: center;
+      }
+    }
+    td {
+      height: 30px;
+      vertical-align: middle;
+      border-bottom: 1px solid $c-gray-light;
+      @media screen and (min-width: 48em) {
+        height: 40px;
+      }
+      &:not(:nth-of-type(-n + 2)) {
+        text-align: center;
+        width: 7%;
+        @media screen and (min-width: 48em) {
+          max-width: 25px;
+        }
+      }
+    }
+  }
+  &__cell-index {
+    width: 15px;
+  }
+  &__cell-team {
+    display: flex;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+      margin: 0 6px 0 0;
+    }
+  }
+}
+</style>

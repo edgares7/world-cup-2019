@@ -33,6 +33,15 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
+  "vue": {
+    "css": {
+      "loaderOptions": {
+        "sass": {
+          "prependData": "@import '@/assets/scss/_variables';"
+        }
+      }
+    }
+  },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -47,6 +56,11 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",

@@ -24,4 +24,61 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.event-tag {
+  display: flex;
+  align-items: center;
+
+  &--goal,
+  &--goal-own,
+  &--goal-penalty {
+    .fa-icon {
+      &.fa-icon-futbol {
+        display: inline-block;
+      }
+    }
+  }
+  &--goal-own {
+    color: $c-red;
+  }
+  &--goal-penalty {
+    &:after {
+      margin-left: 5px;
+      color: $c-mine-shaft;
+      content: "(Penalty)";
+    }
+  }
+  &--yellow-card {
+    width: 12px;
+    height: 18px;
+    background-color: $c-yellow;
+    border-radius: 2px;
+  }
+
+  &--red-card {
+    width: 12px;
+    height: 18px;
+    background-color: $c-red;
+    border-radius: 2px;
+  }
+  &--substitution-out {
+    .fa-icon {
+      &.fa-icon-angel-down {
+        display: inline-block;
+        color: $c-red;
+      }
+    }
+  }
+  &--substitution-in {
+    .fa-icon {
+      &.fa-icon-angel-up {
+        display: inline-block;
+        color: $c-green;
+      }
+    }
+  }
+  .fa-icon {
+    display: none;
+  }
+}
+</style>

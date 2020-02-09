@@ -228,80 +228,6 @@ a {
 }
 
 .match {
-  &-item {
-    position: relative;
-    padding: 4px 0;
-    border-top: 1px solid #e5e5e5;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    cursor: pointer;
-    @media screen and (min-width: 48em) {
-      padding: 7px 0;
-      font-size: 16px;
-    }
-    &__inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    &__time {
-      position: absolute;
-      left: 5px;
-    }
-    &__competitor {
-      display: flex;
-      align-items: center;
-      width: 42%;
-      &--left {
-        justify-content: flex-end;
-      }
-      &--right {
-        justify-content: flex-start;
-      }
-      img {
-        width: 25px;
-        height: 25px;
-        margin: 0 3px;
-        vertical-align: middle;
-        @media screen and (min-width: 48em) {
-          margin: 0 8px;
-        }
-      }
-    }
-    &__result {
-      @media screen and (min-width: 48em) {
-        display: inline-block;
-        width: 35px;
-      }
-    }
-    &--active {
-      &-details {
-        background: inherit;
-        .match-item__angle .fa-angle-up {
-          display: block;
-        }
-      }
-    }
-    &__progress {
-      background: inherit;
-      @media screen and (min-width: 48em) {
-        right: 35px;
-      }
-    }
-    &__angle {
-      position: absolute;
-      right: 8px;
-      outline: none;
-      .fa-angle-up {
-        display: none;
-      }
-    }
-  }
-}
-
-.match {
   .tabs {
     &-component {
       &-tabs {
@@ -340,6 +266,9 @@ a {
       align-items: center;
       min-height: 20px;
       margin: 3px 0;
+      &--away {
+        justify-content: flex-end;
+      }
     }
     &__time {
       min-width: 24px;
@@ -362,42 +291,57 @@ a {
   }
 }
 
-.event-tag--goal .fa-icon.fa-icon-futbol,
-.event-tag--goal-own .fa-icon.fa-icon-futbol,
-.event-tag--goal-penalty .fa-icon.fa-icon-futbol {
-  display: inline-block;
-}
-
-.event-tag--substitution-in .fa-icon.fa-icon-angel-up {
-  display: inline-block;
-  color: #1db954;
-}
-
-.event-tag--substitution-out .fa-icon.fa-icon-angel-down {
-  display: inline-block;
-  color: #e00;
-}
-
-.match-events__event--away {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.event-tag--yellow-card {
-  width: 12px;
-  height: 18px;
-  background-color: #ffd71c;
-  border-radius: 2px;
-}
-
-.event-tag--goal-own {
-  color: #e00;
-}
-
-.event-tag--red-card {
-  width: 12px;
-  height: 18px;
-  background-color: #e00;
-  border-radius: 2px;
+.event {
+  &-tag {
+    &--goal {
+      .fa-icon.fa-icon-futbol {
+        display: inline-block;
+      }
+      &-own {
+        .fa-icon.fa-icon-futbol {
+          display: inline-block;
+        }
+      }
+      &-penalty {
+        .fa-icon.fa-icon-futbol {
+          display: inline-block;
+        }
+      }
+    }
+    &--substitution {
+      &-in {
+        .fa-icon.fa-icon-angel-up {
+          display: inline-block;
+          color: #1db954;
+        }
+      }
+      &-out {
+        .fa-icon.fa-icon-angel-down {
+          display: inline-block;
+          color: #e00;
+        }
+      }
+    }
+    &--yellow {
+      &-card {
+        width: 12px;
+        height: 18px;
+        background-color: #ffd71c;
+        border-radius: 2px;
+      }
+    }
+    &--red {
+      &-card {
+        width: 12px;
+        height: 18px;
+        background-color: #e00;
+        border-radius: 2px;
+      }
+    }
+    &--goal {
+      &-own {
+        color: #e00;
+      }
+    }
+  }
 }

@@ -77,4 +77,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.match {
+  .tabs-component-tabs {
+    display: flex;
+  }
+  .tabs-component-tab {
+    display: flex;
+    width: 100%;
+    background: $c-blue-dark;
+    text-align: center;
+  }
+  &.is-active {
+    background: $c-blue;
+  }
+  a {
+    width: 100%;
+    padding: 8px 5px;
+    font-size: 12px;
+    color: $c-white;
+    @media screen and (min-width: 48em) {
+      font-size: 16px;
+    }
+  }
+  .tabs-component-panels {
+    margin: 10px 0;
+  }
+}
+</style>

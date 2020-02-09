@@ -77,4 +77,27 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.match-events {
+  font-size: 12px;
+  @media screen and (min-width: 48em) {
+    font-size: 16px;
+  }
+  &__time {
+    min-width: 24px;
+  }
+  &__event {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+    margin: 3px 0;
+
+    &--away {
+      justify-content: flex-end;
+    }
+  }
+  .event-tag {
+    margin: 0 4px;
+  }
+}
+</style>
