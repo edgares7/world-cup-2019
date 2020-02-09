@@ -7,6 +7,7 @@ import Icon from "vue-awesome/components/Icon";
 import "vue-awesome/icons";
 
 Vue.use(Tabs);
+Vue.use(require("vue-moment"));
 
 Vue.component("icon", Icon);
 

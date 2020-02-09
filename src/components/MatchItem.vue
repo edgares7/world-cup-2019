@@ -1,7 +1,9 @@
 <template>
   <div :class="elClasses">
     <div class="match-item__inner">
-      <time class="match-item__time">{{ match.datetime }}</time>
+      <time class="match-item__time">{{
+        match.datetime | moment("H:mm")
+      }}</time>
 
       <div class="match-item__competitor match-item__competitor--left">
         <template v-if="match.home_team.code === 'TBD'">
