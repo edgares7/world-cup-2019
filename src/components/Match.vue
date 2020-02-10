@@ -85,17 +85,17 @@ export default {
   .tabs-component-tab {
     display: flex;
     width: 100%;
-    background: $c-blue-dark;
+    background: $green-vogue;
     text-align: center;
   }
   &.is-active {
-    background: $c-blue;
+    background: $venice-blue;
   }
   a {
     width: 100%;
     padding: 8px 5px;
     font-size: 12px;
-    color: $c-white;
+    color: $white;
     @media screen and (min-width: 48em) {
       font-size: 16px;
     }

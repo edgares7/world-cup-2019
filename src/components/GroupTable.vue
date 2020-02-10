@@ -70,7 +70,7 @@ export default {
       font-size: 16px;
     }
     a {
-      color: $c-black;
+      color: $cod-gray;
     }
     th {
       text-align: left;
@@ -82,7 +82,7 @@ export default {
     td {
       height: 30px;
       vertical-align: middle;
-      border-bottom: 1px solid $c-gray-light;
+      border-bottom: 1px solid $mercury;
       @media screen and (min-width: 48em) {
         height: 40px;
       }

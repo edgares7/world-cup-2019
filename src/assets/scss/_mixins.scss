@@ -1,0 +1,38 @@
+/// Vertically centers the element inside of its first non-static parent
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/// Horizontally centers the element inside of its first non-static parent
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/// Absolutely centers the element inside of its first non-static parent
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin circles() {
+  $rotate: 30;
+  $rotate-interval: 30;
+  $delay: -1.1;
+  $delay-interval: 0.1;
+
+  @for $i from 2 through 12 {
+    .circle-#{$i} {
+      transform: rotate(#{$rotate}deg);
+
+      &:before {
+        animation-delay: #{$delay}s;
+      }
+    }
+    $rotate: $rotate + $rotate-interval;
+    $delay: $delay + $delay-interval;
+  }
+}

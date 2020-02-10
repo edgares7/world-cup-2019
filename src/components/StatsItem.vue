@@ -70,10 +70,10 @@ export default {
   &__progress-bar {
     width: 100%;
     height: 12px;
-    background: $c-mine-shaft;
+    background: $mine-shaft;
     &__inner {
       height: 100%;
-      background: $c-blue-light;
+      background: $curious-blue;
     }
   }
 }
