@@ -2,13 +2,17 @@
   <nav class="main-nav">
     <ul class="main-nav__list">
       <router-link active-class="active" tag="li" :to="{ name: 'Home' }" exact>
-        <icon name="home"></icon>
-        <div>Home</div>
+        <li>
+          <icon name="home"></icon>
+          <div>Home</div>
+        </li>
       </router-link>
 
       <router-link active-class="active" tag="li" :to="{ name: 'Matches' }">
-        <icon name="calendar-alt"></icon>
-        <div>Matches</div>
+        <li>
+          <icon name="calendar-alt"></icon>
+          <div>Matches</div>
+        </li>
       </router-link>
     </ul>
   </nav>
@@ -58,8 +62,8 @@ export default {
   position: relative;
   z-index: 600;
   width: 100%;
-  border-top: 1px solid $c-gray-light;
-  background: $c-blue;
+  border-top: 1px solid $mercury;
+  background: $venice-blue;
   @media screen and (min-width: 48em) {
     border: 0;
   }
@@ -73,7 +77,7 @@ export default {
     display: flex;
     margin: 0 auto;
     max-width: 960px;
-    color: $c-white;
+    color: $white;
     text-align: center;
     @media screen and (min-width: 48em) {
       text-align: left;
@@ -98,7 +102,7 @@ export default {
       }
       &.active,
       &:hover {
-        background: $c-blue-dark;
+        background: $green-vogue;
       }
     }
   }

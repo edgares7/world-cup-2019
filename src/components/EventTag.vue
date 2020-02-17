@@ -39,33 +39,33 @@ export default {
     }
   }
   &--goal-own {
-    color: $c-red;
+    color: $red;
   }
   &--goal-penalty {
     &:after {
       margin-left: 5px;
-      color: $c-mine-shaft;
+      color: $mine-shaft;
       content: "(Penalty)";
     }
   }
   &--yellow-card {
     width: 12px;
     height: 18px;
-    background-color: $c-yellow;
+    background-color: $candlelight;
     border-radius: 2px;
   }
 
   &--red-card {
     width: 12px;
     height: 18px;
-    background-color: $c-red;
+    background-color: $red;
     border-radius: 2px;
   }
   &--substitution-out {
     .fa-icon {
       &.fa-icon-angel-down {
         display: inline-block;
-        color: $c-red;
+        color: $red;
       }
     }
   }
@@ -73,7 +73,7 @@ export default {
     .fa-icon {
       &.fa-icon-angel-up {
         display: inline-block;
-        color: $c-green;
+        color: $mountain-meadow;
       }
     }
   }

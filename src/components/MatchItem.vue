@@ -93,7 +93,7 @@ export default {
   &-item {
     position: relative;
     padding: 4px 0;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $mercury;
     font-size: 12px;
     line-height: 16px;
     text-align: center;

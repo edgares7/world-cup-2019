@@ -31,12 +31,5 @@ export default {
   &__content {
     padding-bottom: 70px;
   }
-  // .main-nav {
-  //   position: fixed;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   margin: 0 auto;
-  // }
 }
 </style>

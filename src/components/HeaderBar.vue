@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 .header-bar {
   padding: 8px;
-  border-bottom: 1px solid $c-gray-light;
-  background: $c-white;
+  border-bottom: 1px solid $mercury;
+  background: $white;
   &__inner {
     max-width: 960px;
     margin: 0 auto;

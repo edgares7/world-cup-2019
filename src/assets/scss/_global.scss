@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: $c-gray-light;
+  background: $mercury;
 }
 
 button {
@@ -38,7 +38,7 @@ a {
     overflow-y: auto;
     margin: 10px auto;
     padding: 15px 10px;
-    background: #fff;
+    background: $white;
   }
 }
 
@@ -72,7 +72,7 @@ a {
       td {
         height: 30px;
         vertical-align: middle;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $mercury;
         @media screen and (min-width: 48em) {
           height: 40px;
         }
@@ -85,7 +85,7 @@ a {
         }
       }
       a {
-        color: #181818;
+        color: $cod-gray;
       }
     }
     &__cell {
@@ -122,8 +122,8 @@ a {
 .header {
   &-bar {
     padding: 8px;
-    border-bottom: 1px solid #e5e5e5;
-    background: #fff;
+    border-bottom: 1px solid $mercury;
+    background: $white;
     &__inner {
       max-width: 960px;
       margin: 0 auto;
@@ -140,8 +140,8 @@ a {
     position: relative;
     z-index: 600;
     width: 100%;
-    border-top: 1px solid #e5e5e5;
-    background: #0855a2;
+    border-top: 1px solid $mercury;
+    background: $venice-blue;
     @media screen and (min-width: 48em) {
       border: 0;
     }
@@ -150,7 +150,7 @@ a {
     display: flex;
     margin: 0 auto;
     max-width: 960px;
-    color: #fff;
+    color: $white;
     text-align: center;
     @media screen and (min-width: 48em) {
       text-align: left;
@@ -162,7 +162,7 @@ a {
       }
       &.active,
       &:hover {
-        background: #022c55;
+        background: $green-vogue;
       }
     }
     .fa-icon {
@@ -179,20 +179,20 @@ a {
 
 /* matches styles */
 
-.matches-view {
-  > .tabs-component {
-    > .tabs-component-tabs {
+.matches {
+  &>.tabs-component {
+    &>.tabs-component-tabs {
       display: flex;
       margin-bottom: 10px;
       .tabs-component-tab {
         display: flex;
         &.is-active {
-          border-bottom: 2px solid #0855a2;
+          border-bottom: 2px solid $venice-blue;
         }
         a {
           padding: 6px 8px;
           font-size: 12px;
-          color: #0855a2;
+          color: $venice-blue;
         }
       }
     }
@@ -206,8 +206,8 @@ a {
     padding: 2px 8px;
     line-height: 28px;
     font-size: 14px;
-    color: #fff;
-    background: #022c55;
+    color: $white;
+    background: $green-vogue;
     border-radius: 3px;
     @media screen and (min-width: 48em) {
       font-size: 16px;
@@ -221,7 +221,7 @@ a {
       font-size: 12px;
       font-weight: bold;
       line-height: 12px;
-      background: #1599e8;
+      background: $curious-blue;
       border-radius: 3px;
     }
   }
@@ -236,16 +236,16 @@ a {
       &-tab {
         display: flex;
         width: 100%;
-        background: #022c55;
+        background: $green-vogue;
         text-align: center;
         &.is-active {
-          background: #0855a2;
+          background: $venice-blue;
         }
         a {
           width: 100%;
           padding: 8px 5px;
           font-size: 12px;
-          color: #fff;
+          color: $white;
           @media screen and (min-width: 48em) {
             font-size: 16px;
           }
@@ -312,13 +312,13 @@ a {
       &-in {
         .fa-icon.fa-icon-angel-up {
           display: inline-block;
-          color: #1db954;
+          color: $mountain-meadow;
         }
       }
       &-out {
         .fa-icon.fa-icon-angel-down {
           display: inline-block;
-          color: #e00;
+          color: $red;
         }
       }
     }
@@ -326,7 +326,7 @@ a {
       &-card {
         width: 12px;
         height: 18px;
-        background-color: #ffd71c;
+        background-color: $candlelight;
         border-radius: 2px;
       }
     }
@@ -334,13 +334,13 @@ a {
       &-card {
         width: 12px;
         height: 18px;
-        background-color: #e00;
+        background-color: $red;
         border-radius: 2px;
       }
     }
     &--goal {
       &-own {
-        color: #e00;
+        color: $red;
       }
     }
   }

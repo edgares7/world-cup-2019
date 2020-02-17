@@ -64,7 +64,7 @@ export default {
   padding: 18px 6px;
   outline: none;
   background: rgba(100, 100, 100, 0.9);
-  color: $c-white;
+  color: $white;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -77,7 +77,7 @@ export default {
     font-size: 30px;
   }
   &:hover {
-    background: $c-blue-dark;
+    background: $green-vogue;
   }
   &--active {
     display: block;

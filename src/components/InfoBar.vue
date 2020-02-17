@@ -30,8 +30,8 @@ export default {
   padding: 2px 8px;
   line-height: 28px;
   font-size: 14px;
-  color: $c-white;
-  background: $c-blue-dark;
+  color: $white;
+  background: $green-vogue;
   border-radius: 3px;
   @media screen and (min-width: 48em) {
     font-size: 16px;
@@ -43,7 +43,7 @@ export default {
     font-size: 12px;
     font-weight: bold;
     line-height: 12px;
-    background: $c-blue-light;
+    background: $curious-blue;
     border-radius: 3px;
   }
 }
