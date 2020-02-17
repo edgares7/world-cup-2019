@@ -4,31 +4,31 @@
       <tab name="Group phase">
         <template v-for="(match, index) in getStage('First stage')">
           <info-bar :key="'info' + index" :date="match.datetime"></info-bar>
-          <match :key="index" :match="match" />
+          <match :key="index" :match="match"></match>
         </template>
       </tab>
-      <tab name="1/8 finals">
+      <tab name="Round of 16">
         <template v-for="(match, index) in getStage('Round of 16')">
           <info-bar :key="'info' + index" :date="match.datetime"></info-bar>
-          <match :key="index" :match="match" />
+          <match :key="index" :match="match"></match>
         </template>
       </tab>
       <tab name="Quarter finals">
         <template v-for="(match, index) in getStage('Quarter-finals')">
           <info-bar :key="'info' + index" :date="match.datetime"></info-bar>
-          <match :key="index" :match="match" />
+          <match :key="index" :match="match"></match>
         </template>
       </tab>
       <tab name="Semi finals">
         <template v-for="(match, index) in getStage('Semi-finals')">
           <info-bar :key="'info' + index" :date="match.datetime"></info-bar>
-          <match :key="index" :match="match" />
+          <match :key="index" :match="match"></match>
         </template>
       </tab>
       <tab name="Final">
         <template v-for="(match, index) in getStage('Final')">
           <info-bar :key="'info' + index" :date="match.datetime"></info-bar>
-          <match :key="index" :match="match" />
+          <match :key="index" :match="match"></match>
         </template>
       </tab>
     </tabs>

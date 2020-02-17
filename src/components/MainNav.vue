@@ -2,13 +2,17 @@
   <nav class="main-nav">
     <ul class="main-nav__list">
       <router-link active-class="active" tag="li" :to="{ name: 'Home' }" exact>
-        <icon name="home"></icon>
-        <div>Home</div>
+        <li>
+          <icon name="home"></icon>
+          <div>Home</div>
+        </li>
       </router-link>
 
       <router-link active-class="active" tag="li" :to="{ name: 'Matches' }">
-        <icon name="calendar-alt"></icon>
-        <div>Matches</div>
+        <li>
+          <icon name="calendar-alt"></icon>
+          <div>Matches</div>
+        </li>
       </router-link>
     </ul>
   </nav>
