@@ -7,7 +7,12 @@
           <div>Home</div>
         </li>
       </router-link>
-
+      <router-link active-class="active" tag="li" :to="{ name: 'Groups' }">
+        <li>
+          <icon name="table"></icon>
+          <div>Groups</div>
+        </li>
+      </router-link>
       <router-link active-class="active" tag="li" :to="{ name: 'Matches' }">
         <li>
           <icon name="calendar-alt"></icon>

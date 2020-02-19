@@ -1,46 +1,56 @@
 <template>
-  <div class="home groups-view">
-    <GroupTable
-      v-for="(group, index) in getGroups"
-      :group="group"
-      :key="index"
-    ></GroupTable>
-    <loading-spinner v-if="!getGroups" />
+  <div class="home">
+    <h1>
+      Website built on Vue that show results and standings from 2018 World Cup
+    </h1>
+    <div>
+      <ul>
+        <li>Edgar Esparza</li>
+        <li>Front-End Developer @ Dimensional Innovations</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What Did I Use</h2>
+      <ul>
+        <li>Vue + Vuex</li>
+        <li>SASS</li>
+        <li>Vanilla JS + Lodash</li>
+        <li>vue-awesome - FontAwesome Vue Component</li>
+        <li>vue-moment - Moment.js filters to normalize date and times</li>
+        <li>
+          <a href="https://world-cup-json-2018.herokuapp.com/"
+            >https://world-cup-json-2018.herokuapp.com/</a
+          >
+          - for my data
+        </li>
+        <li>vue-tabs-component - a simple tabs component</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-import GroupTable from "@/components/GroupTable";
-import LoadingSpinner from "@/components/LoadingSpinner";
 export default {
-  name: "Home",
-  components: {
-    GroupTable,
-    LoadingSpinner
-  },
-  computed: {
-    ...mapGetters(["getGroups"])
-  },
-  methods: {
-    ...mapActions({
-      fetchGroups: "fetchGroups"
-    })
-  },
-  created() {
-    this.fetchGroups();
-  }
+  name: "Home"
 };
 </script>
 <style lang="scss" scoped>
-@media screen and (min-width: 48em) {
-  .groups-view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  > div {
-    margin: 0 15px;
-  }
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h1 {
+  font-size: 23px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 </style>
