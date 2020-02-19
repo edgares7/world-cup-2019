@@ -144,6 +144,9 @@ export default {
         .match-item__angle .fa-angle-up {
           display: block;
         }
+        .match-item__angle .fa-angle-down {
+          display: none;
+        }
       }
     }
     &__progress {

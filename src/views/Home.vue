@@ -5,16 +5,19 @@
       :group="group"
       :key="index"
     ></GroupTable>
+    <loading-spinner v-if="!getGroups" />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
 import GroupTable from "@/components/GroupTable";
+import LoadingSpinner from "@/components/LoadingSpinner";
 export default {
   name: "Home",
   components: {
-    GroupTable
+    GroupTable,
+    LoadingSpinner
   },
   computed: {
     ...mapGetters(["getGroups"])
